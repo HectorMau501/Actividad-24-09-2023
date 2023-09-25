@@ -3,14 +3,14 @@
 
     <string name="titulo">Becas de Transporte</string>
 
-<!--    Activity de Ingreso-->
+    <!--    Activity de Ingreso-->
     <string name="correo">Correo electrónico</string>
     <string name="password">Contraseña</string>
     <string name="guardar">Guardar datos</string>
     <string name="ingresar">Ingresar</string>
     <string name="borrar">limpiar</string>
 
-<!--    Activity de Formulario-->
+    <!--    Activity de Formulario-->
     <string name="folio">Número de folio</string>
     <string name="institucion">Institución de procedencia</string>
     <string name="nombre">Nombre(s)</string>
@@ -19,12 +19,20 @@
     <string name="registrar">Registrar</string>
     <string name="limpiar">Limpiar</string>
 
-<!--    Activity de Consulta-->
+    <!--    Activity de Consulta-->
     <string name="info">Información registrada:</string>
 
-<!--    Opciones del Menu-->
+    <!--    Opciones del Menu-->
     <string name="formulario">Formulario</string>
     <string name="consultar">Consultar</string>
     <string name="cerrar">Cerrar sesión</string>
+
+    <!--    Opciones del Spinner-->
+    <string-array name="niveles">
+        <item>Nivel Básico</item>
+        <item>Nivel Media Superior</item>
+        <item>Nivel Superior</item>
+        <item>Nivel Posgrado</item>
+    </string-array>
 
 </resources>

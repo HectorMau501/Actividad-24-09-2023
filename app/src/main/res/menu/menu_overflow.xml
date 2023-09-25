@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_directions_bus_24"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/itmFormulario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/formulario" />
+    <item
+        android:id="@+id/itmConsultar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/consultar" />
+    <item
+        android:id="@+id/itmCerrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/cerrar" />
+</menu>
