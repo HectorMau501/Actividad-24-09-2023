@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Actividad-24-09-2023</string>
+
+    <string name="titulo">Becas de Transporte</string>
+
+<!--    Activity de Ingreso-->
+    <string name="correo">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="guardar">Guardar datos</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="borrar">limpiar</string>
+
+<!--    Activity de Formulario-->
+    <string name="folio">Número de folio</string>
+    <string name="institucion">Institución de procedencia</string>
+    <string name="nombre">Nombre(s)</string>
+    <string name="apellido">Apellido(s)</string>
+    <string name="nivel">Nivel Educativo</string>
+    <string name="registrar">Registrar</string>
+    <string name="limpiar">Limpiar</string>
+
+<!--    Activity de Consulta-->
+    <string name="info">Información registrada:</string>
+
+<!--    Opciones del Menu-->
+    <string name="formulario">Formulario</string>
+    <string name="consultar">Consultar</string>
+    <string name="cerrar">Cerrar sesión</string>
+
+</resources>
