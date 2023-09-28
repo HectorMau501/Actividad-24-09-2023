@@ -53,7 +53,7 @@ class ingreso : AppCompatActivity() {
             intent.putExtra("nivel", beca.nivel)
             startActivity(intent)
         }else{
-            Toast.makeText(this,"Captirar informacion",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"Capturar informacion",Toast.LENGTH_LONG).show()
         }
     }//ingresar
 

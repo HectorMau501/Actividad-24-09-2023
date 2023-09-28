@@ -21,15 +21,15 @@ class MainActivity : AppCompatActivity() {
         //Intancia para generar un hilo para lanzar Activity de Ingreso o Menu
         Timer().schedule(object : TimerTask(){
             override fun run() {
-                intent  = if(nuevoUsuario()){
-                    Intent(applicationContext, menu::class.java)
+                     if(nuevoUsuario()){
+                    intent = Intent(applicationContext, menu::class.java)
                     intent.putExtra("folio", beca.folio)
                     intent.putExtra("institucion",beca.institucion)
                     intent.putExtra("nombre",beca.nombre)
                     intent.putExtra("apellido",beca.apellido)
                     intent.putExtra("nivel",beca.nivel)
                 } else{
-                    Intent(applicationContext, ingreso::class.java)
+                    intent = Intent(applicationContext, ingreso::class.java)
                 }
                 startActivity(intent)
             }

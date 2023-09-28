@@ -1,5 +1,6 @@
 package com.example.actividad_24_09_2023
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -7,6 +8,8 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.Toast
+import com.example.actividad_24_09_2023.R.id.editInstitucion
 
 class registro : AppCompatActivity() {
 
@@ -24,7 +27,7 @@ class registro : AppCompatActivity() {
 
         //Asociar con componentes graficos
         folio = findViewById(R.id.editFolio)
-//        institucion = findViewById(R.id.editInstitucion)
+        institucion = findViewById(editInstitucion)
         nombre = findViewById(R.id.editNombre)
         apellido = findViewById(R.id.editApellido)
         nivel = findViewById(R.id.spnNivel)
@@ -41,12 +44,54 @@ class registro : AppCompatActivity() {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 nivelSel = opciones[p2]
             }
-
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
         }//AdapterView
     }//OnCreate
 
-    
+    fun onClick(view: View?){
+        when(view?.id){
+            R.id.btnRegistrar -> agregar()
+            R.id.btnLimpiar2 -> limpiar2()
+        }
+    }
+
+    private fun limpiar2() {
+        folio.text = null
+        institucion.text = null
+        nombre.text = null
+        apellido.text = null
+        folio.requestFocus()
+    }
+
+    private fun agregar() {
+        //validar que exista informacion en cajas de texto
+        if(folio.text.isNotEmpty() && folio.text.isNotBlank() && institucion.text.isNotEmpty()
+            && institucion.text.isNotBlank() && nombre.text.isNotEmpty() && nombre.text.isNotBlank()
+            && apellido.text.isNotEmpty() && apellido.text.isNotBlank()){
+
+            beca.folio = folio.text.toString().toInt()
+            beca.institucion = institucion.text.toString()
+            beca.nombre = nombre.text.toString()
+            beca.apellido = apellido.text.toString()
+            beca.nivel = nivelSel
+            //Mensaje informativo
+            Toast.makeText(this,"Informacion Registrada",Toast.LENGTH_LONG).show()
+            //Registrar al menu principal
+            val intent = Intent(this,menu::class.java)
+            intent.putExtra("folio",beca.folio)
+            intent.putExtra("institucion",beca.institucion)
+            intent.putExtra("nombre",beca.nombre)
+            intent.putExtra("apellido",beca.apellido)
+            intent.putExtra("nivel",beca.nivel)
+
+            // Iniciar la actividad menu con el Intent
+            startActivity(intent)
+        }else{
+            Toast.makeText(this,"Capturar informacion",Toast.LENGTH_LONG).show()
+        }
+    }//agregar
+
+
 }//class

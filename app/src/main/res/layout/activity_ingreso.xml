@@ -66,6 +66,7 @@
         android:layout_marginStart="93dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="52dp"
+        android:onClick="onClick"
         android:text="@string/ingresar"
         app:layout_constraintEnd_toStartOf="@+id/btnLimpiar"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,6 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="69dp"
+        android:onClick="onClick"
         android:text="@string/limpiar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/swtGuardar" />

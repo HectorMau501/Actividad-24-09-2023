@@ -47,20 +47,6 @@
 
     <EditText
         android:id="@+id/editApellido"
-        android:layout_width="303dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="60dp"
-        android:ems="10"
-        android:hint="@string/institucion"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editFolio" />
-
-    <EditText
-        android:id="@+id/editTextText2"
         android:layout_width="305dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -71,7 +57,7 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editApellido" />
+        app:layout_constraintTop_toBottomOf="@+id/editInstitucion" />
 
     <EditText
         android:id="@+id/editNombre"
@@ -85,7 +71,7 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/editApellido" />
 
     <Spinner
         android:id="@+id/spnNivel"
@@ -105,6 +91,7 @@
         android:layout_marginStart="60dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="100dp"
+        android:onClick="onClick"
         android:text="@string/registrar"
         app:layout_constraintEnd_toStartOf="@+id/btnLimpiar2"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,7 +103,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="60dp"
+        android:onClick="onClick"
         android:text="@string/limpiar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spnNivel" />
+
+    <EditText
+        android:id="@+id/editInstitucion"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="@string/institucion"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFolio" />
 </androidx.constraintlayout.widget.ConstraintLayout>
